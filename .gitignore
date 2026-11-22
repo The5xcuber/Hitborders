@@ -1,0 +1,9 @@
+build/
+build-win/
+.cache/
+.vscode/
+*.zip
+*.geode
+*.dll
+*.pdb
+*.lib

@@ -1,0 +1,139 @@
+{
+  "geode": "5.11.1",
+  "gd": {
+    "win": "2.2081"
+  },
+  "version": "v1.0.0-alpha.3",
+  "id": "the5xcuber.hitborders",
+  "name": "Hitborders",
+  "developer": "The5xcuber",
+  "description": "Visualizes inflated player-center hitborders.",
+  "settings": {
+    "section-general": {
+      "type": "title",
+      "name": "General"
+    },
+    "hitborders-enabled": {
+      "type": "bool",
+      "name": "Enable Hitborders",
+      "description": "Toggle the Hitborders visualizer on or off live without restarting.",
+      "default": false
+    },
+    "player-opacity": {
+      "type": "float",
+      "name": "Player Opacity",
+      "description": "Opacity of the player icon while Hitborders is enabled (0.0 to hide, 1.0 full).",
+      "default": 0.25,
+      "min": 0.0,
+      "max": 1.0,
+      "control": {
+        "slider": true,
+        "slider-step": 0.05
+      }
+    },
+    "hide-wave-trail": {
+      "type": "bool",
+      "name": "Disable Wave Trail",
+      "description": "Hide the stock Geometry Dash wave trail while Hitborders is enabled.",
+      "default": false
+    },
+    "layout-mode": {
+      "type": "bool",
+      "name": "Layout Mode",
+      "description": "Hide decoration objects, force color channels white, and use a flat grey background.",
+      "default": false
+    },
+    "section-rendering": {
+      "type": "title",
+      "name": "Hitborders & Merging"
+    },
+    "line-thickness": {
+      "type": "float",
+      "name": "Line Thickness",
+      "description": "Outline and player path thickness in real screen pixels.",
+      "default": 3.0,
+      "min": 1.0,
+      "max": 8.0,
+      "control": {
+        "slider": true,
+        "slider-step": 0.5
+      }
+    },
+    "merge-outlines": {
+      "type": "bool",
+      "name": "Merge Outlines & Fills",
+      "description": "Merge overlapping outlines and flatten interior fills into one uniform region with no alpha stacking.",
+      "default": true
+    },
+    "fill-opacity": {
+      "type": "float",
+      "name": "Object Fill Opacity",
+      "description": "Flat interior fill opacity for inflated hitborders (0 for outline only).",
+      "default": 0.25,
+      "min": 0.0,
+      "max": 0.7,
+      "control": {
+        "slider": true,
+        "slider-step": 0.05
+      }
+    },
+    "show-interactables": {
+      "type": "bool",
+      "name": "Show Interactables",
+      "description": "Draw inflated trigger areas for orbs, pads, and portals.",
+      "default": true
+    },
+    "glow": {
+      "type": "bool",
+      "name": "Glow",
+      "description": "Draw a soft glow pass behind outlines and the player path.",
+      "default": false
+    },
+    "hide-inside-hazards": {
+      "type": "bool",
+      "name": "Hide Objects Inside Hazards",
+      "description": "Opt-in: hide hazards, solids, and interactables completely enclosed inside hazard hitboxes.",
+      "default": false
+    },
+    "only-reachable-borders": {
+      "type": "bool",
+      "name": "Only Reachable Borders",
+      "description": "Opt-in: flood-fill from the player center to hide borders inside walls or unreachable pockets.",
+      "default": false
+    },
+    "section-colors": {
+      "type": "title",
+      "name": "Colors"
+    },
+    "color-hazard": {
+      "type": "rgb",
+      "name": "Hazard Color",
+      "description": "Color for spikes, saws, and hazard slopes.",
+      "default": [255, 51, 51]
+    },
+    "color-solid": {
+      "type": "rgb",
+      "name": "Solid Block Color",
+      "description": "Color for neutral solid blocks and normal slopes.",
+      "default": [51, 140, 255]
+    },
+    "color-path": {
+      "type": "rgb",
+      "name": "Player Path Color",
+      "description": "Color for the player center line (non-wave modes).",
+      "default": [255, 235, 51]
+    },
+    "color-wave-path": {
+      "type": "rgb",
+      "name": "Wave Path Color",
+      "description": "Color for the player center line in wave mode.",
+      "default": [255, 140, 26]
+    },
+    "color-portal": {
+      "type": "rgb",
+      "name": "Portal Color",
+      "description": "Color for mode, size, mirror, and dual portals.",
+      "default": [173, 179, 191]
+    }
+  }
+}
