@@ -2,7 +2,7 @@
 
 Geode mod for Geometry Dash 2.2081 (Geode 5.x, min 5.11.1). Made with AI (Gemini Neon 4)
 
-Draws the level as the player's center line sees it: every solid, hazard, slope, saw, and interactable is inflated by the active (or upcoming lookahead) player hitbox (Minkowski sum), with stencil-flattened fills, merged outer borders, and a stream-simplified player center path.
+Draws the level as the player's center line sees it: every solid, hazard, slope, saw, and interactable is inflated by the active player hitbox with, merged outer borders, and a stream-simplified player center path.
 
 ## Build
 
@@ -18,7 +18,7 @@ cmake -B build
 cmake --build build
 ```
 
-## Settings (Live, No Restart)
+## Settings
 
 Divided into three sections in the Geode settings menu:
 
@@ -46,8 +46,3 @@ Divided into three sections in the Geode settings menu:
 - `src/Trail.hpp` / `src/Trail.cpp`: Stream-simplified player center path with uncommitted head support and 6000-point history cap.
 - `src/Overlay.hpp` / `src/Overlay.cpp`: `FlatFillLayer` (stencil-merged uniform fill) and `HitbordersOverlay` attached to `PlayLayer::m_objectLayer` (zOrder 10000).
 - `src/Hooks.cpp`: Geode `$modify` hooks for `PlayLayer::setupHasCompleted`, `PlayLayer::resetLevel`, and `PlayerObject::update`.
-
-## Known Limitations
-
-- Non-90-degree rotated solids, hazards, and slopes are approximated by their axis-aligned bounding box (`GameObject::getObjectRect()`).
-- Dynamic mover detection identifies objects whose group IDs are targeted by move, rotate, scale, follow, or keyframe triggers (`EffectGameObject` and its transform/follow/keyframe subclasses). Objects moved by exotic or indirect spawn/trigger chains that do not set standard target group fields may be classified as static until the view rebuilds.
