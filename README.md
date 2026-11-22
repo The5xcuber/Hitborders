@@ -1,6 +1,6 @@
 # Hitborders
 
-Geode mod for Geometry Dash 2.2081 (Geode 5.x, min 5.11.1).
+Geode mod for Geometry Dash 2.2081 (Geode 5.x, min 5.11.1). Made with AI (Gemini Neon 4)
 
 Draws the level as the player's center line sees it: every solid, hazard, slope, saw, and interactable is inflated by the active (or upcoming lookahead) player hitbox (Minkowski sum), with stencil-flattened fills, merged outer borders, and a stream-simplified player center path.
 
